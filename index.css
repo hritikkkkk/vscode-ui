@@ -440,3 +440,193 @@ body {
 .footer-bottom a:hover .footer-icon {
   filter: brightness(1.2);
 }
+
+
+@media (max-width: 768px) {
+  .container {
+      padding: 0 1rem;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .navbar {
+      flex-direction: column;
+      align-items: flex-start;
+  }
+
+  .nav-left, .nav-right {
+      width: 100%;
+  }
+
+  .nav-right {
+      margin-top: 1rem;
+      justify-content: space-between;
+  }
+
+  .logo-title {
+      display: none;
+  }
+
+  .top-nav {
+      display: none;
+  }
+
+  .search {
+      order: 2;
+      width: calc(100% - 120px);
+      margin-top: 0;
+  }
+
+  .download {
+      order: 3;
+  }
+}
+
+@media (max-width: 768px) {
+  .main {
+      flex-direction: column-reverse;
+  }
+
+  .left, .right {
+      width: 100%;
+  }
+
+  .right {
+      margin-bottom: 2rem;
+  }
+
+  .herotxt {
+      font-size: 2.5rem;
+      text-align: center;
+  }
+
+  .highlight {
+      margin: 0 auto 1rem;
+  }
+
+  .download-btn-large {
+      width: 100%;
+      max-width: 300px;
+      margin: 1.5rem auto;
+      display: block;
+  }
+
+  .download-links, .subtext-terms {
+      text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .build-section {
+      flex-direction: column;
+  }
+
+  .build-left, .build-right {
+      width: 100%;
+  }
+
+  .build-left {
+      text-align: center;
+      margin-bottom: 2rem;
+  }
+
+  .languages {
+      justify-content: center;
+  }
+
+  .language {
+      width: 33.33%;
+      margin-bottom: 1.5rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .extensions-section {
+      flex-direction: column;
+  }
+
+  .content-left, .content-right {
+      width: 100%;
+  }
+
+  .content-left {
+      text-align: center;
+      margin-bottom: 2rem;
+  }
+
+  .extensions-grid {
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+}
+
+
+@media (max-width: 768px) {
+  .features-section h2,
+  .features-section > p {
+      text-align: center;
+  }
+
+  .features-grid {
+      grid-template-columns: 1fr;
+  }
+
+  .feature-card {
+      text-align: center;
+  }
+
+  .feature-card img {
+      margin: 0 auto 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-icons, .footer-bottom {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .footer-icons a, .footer-bottom a {
+      margin: 0.5rem 0;
+  }
+}
+
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .main, .build-section, .extensions-section, .features-section {
+      padding: 3rem 2rem;
+  }
+
+  .features-grid {
+      grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1025px) {
+  .main, .build-section, .extensions-section, .features-section {
+      padding: 4rem 5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .right img {
+      max-width: 100%;
+      height: auto;
+      margin: 0 auto 2rem;
+      display: block;
+  }
+
+  .language img {
+      max-width: 40px;
+      height: auto;
+  }
+
+  .extension-card {
+      flex-direction: column;
+      text-align: center;
+  }
+
+  .extension-card img {
+      margin: 0 auto 1rem;
+  }
+}
