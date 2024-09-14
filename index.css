@@ -117,6 +117,7 @@ body {
 
 .link:hover {
   color: #005ba4;
+  text-decoration: underline;
 }
 
 .main {
@@ -228,7 +229,135 @@ body {
 .language p {
   margin-top: 10px;
 }
+.extensions-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 20px;
+  display: flex;
+  flex-wrap: wrap;
+}
 
+.content-left {
+  flex: 1;
+  padding-right: 60px;
+  max-width: 400px;
+}
+
+.content-right {
+  flex: 2;
+}
+
+
+.subtext {
+  font-size: 18px;
+  color: #444;
+  margin-bottom: 30px;
+}
+
+.learn-more {
+  display: inline-block;
+  color: #0066b8;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 10px 20px;
+  border: 1px solid #0066b8;
+  border-radius: 2px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.learn-more:hover {
+  background-color: #0066b8;
+  color: white;
+}
+
+.extensions-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.extension-card {
+  background-color: #1e1e1e;
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  align-items: center;
+  transition: box-shadow 0.3s;
+  cursor: pointer;
+}
+
+.extension-card:hover {
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.extension-card img {
+  width: 48px;
+  height: 48px;
+  margin-right: 20px;
+}
+
+.extension-info h3 {
+  color: #e9eaeb;
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0 0 5px 0;
+}
+
+.extension-info p {
+  font-size: 14px;
+  color: #767676;
+  margin: 0;
+}
+
+.extensions-footer {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.extensions-footer a {
+  color: #0066b8;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.extensions-footer a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .extensions-section {
+    flex-direction: column;
+  }
+
+  .content-left {
+    padding-right: 0;
+    max-width: 100%;
+    margin-bottom: 40px;
+  }
+
+  .extensions-grid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .extensions-list {
+    grid-template-columns: repeat(
+      1,
+      1fr
+    ); /* Single column on smaller screens */
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .extensions-list {
+    grid-template-columns: repeat(2, 1fr); /* Two columns on medium screens */
+  }
+}
 .features-section {
   padding: 40px 80px;
   text-align: center;
