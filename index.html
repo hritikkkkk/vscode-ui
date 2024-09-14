@@ -210,42 +210,42 @@
 
       <div class="content-right">
           <div class="extensions-grid">
-              <div class="extension-card">
+              <div class="extension-card" data-link="https://marketplace.visualstudio.com/items?itemName=ms-python.python">
                   <img src="https://code.visualstudio.com/assets/images/python-extension.png" alt="Python extension icon">
                   <div class="extension-info">
                       <h3>Python</h3>
                       <p>Adds rich language support for Python</p>
                   </div>
               </div>
-              <div class="extension-card">
+              <div class="extension-card" data-link="https://marketplace.visualstudio.com/items?itemName=GitHub.copilot">
                   <img src="https://code.visualstudio.com/assets/images/copilot-extension.png" alt="GitHub Copilot extension icon">
                   <div class="extension-info">
                       <h3>GitHub Copilot</h3>
                       <p>Your AI pair programmer</p>
                   </div>
               </div>
-              <div class="extension-card">
+              <div class="extension-card" data-link="https://marketplace.visualstudio.com/items?itemName=ms-vscode.cpptools">
                   <img src="https://code.visualstudio.com/assets/images/c-extension.png" alt="C/C++ extension icon">
                   <div class="extension-info">
                       <h3>C/C++</h3>
                       <p>Adds rich language support for C/C++</p>
                   </div>
               </div>
-              <div class="extension-card">
+              <div class="extension-card" data-link="https://marketplace.visualstudio.com/items?itemName=ms-toolsai.jupyter">
                   <img src="https://code.visualstudio.com/assets/images/jupyter-extension.png" alt="Jupyter extension icon">
                   <div class="extension-info">
                       <h3>Jupyter</h3>
                       <p>Language support for Jupyter Notebooks</p>
                   </div>
               </div>
-              <div class="extension-card">
+              <div class="extension-card" data-link="https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens">
                   <img src="https://code.visualstudio.com/assets/images/gitlens-extension.png" alt="GitLens extension icon">
                   <div class="extension-info">
                       <h3>GitLens</h3>
                       <p>Supercharge your Git experience</p>
                   </div>
               </div>
-              <div class="extension-card">
+              <div class="extension-card" data-link="https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csdevkit">
                   <img src="https://code.visualstudio.com/assets/images/cs-dev-kit-extension.png" alt="C# Dev Kit extension icon">
                   <div class="extension-info">
                       <h3>C# Dev Kit</h3>
@@ -253,8 +253,8 @@
                   </div>
               </div>
           </div>
-          <div class="extensions-footer">
-              <a href="#">View 50k+ extensions in the Extension Marketplace</a>
+          <div class="extensions-footer">       
+            View 50k+ extensions in the <a href="https://marketplace.visualstudio.com/vscode"> Extension Marketplace</a>
           </div>
       </div>
   </div
@@ -435,6 +435,11 @@
 
 <script>
   document.querySelectorAll(".feature-card").forEach((card) => {
+    card.addEventListener("click", () => {
+      window.location.href = card.getAttribute("data-link");
+    });
+  });
+  document.querySelectorAll(".extension-card").forEach((card) => {
     card.addEventListener("click", () => {
       window.location.href = card.getAttribute("data-link");
     });
