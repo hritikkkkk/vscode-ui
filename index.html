@@ -43,7 +43,7 @@
           width="20px"
         />
         <input type="text" placeholder="Search Docs" class="search" />
-        <button class="download">Download</button>
+        <button class="download" data-link="https://code.visualstudio.com/Download">Download</button>
       </div>
     </div>
     <div class="announcement">
@@ -64,7 +64,7 @@
           <span>Editing.</span>
           <span>Redefined.</span>
         </h1>
-        <button class="download-btn-large">Download for Windows</button>
+        <button class="download-btn-large" data-link="https://code.visualstudio.com/Download">Download for Windows</button>
         <p class="download-links">
           <a href="https://vscode.dev/" class="link">Web</a>,
           <a href="https://code.visualstudio.com/insiders" class="link"
@@ -434,14 +434,13 @@
 </html>
 
 <script>
-  document.querySelectorAll(".feature-card").forEach((card) => {
-    card.addEventListener("click", () => {
-      window.location.href = card.getAttribute("data-link");
+  function addClickListener(className) {
+    document.querySelectorAll(`.${className}`).forEach((element) => {
+      element.addEventListener("click", () => {
+        window.location.href = element.getAttribute("data-link");
+      });
     });
-  });
-  document.querySelectorAll(".extension-card").forEach((card) => {
-    card.addEventListener("click", () => {
-      window.location.href = card.getAttribute("data-link");
-    });
-  });
+  }
+
+  ["feature-card", "extension-card", "download", "download-btn-large"].forEach(addClickListener);
 </script>
