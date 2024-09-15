@@ -229,6 +229,62 @@ body {
 .language p {
   margin-top: 10px;
 }
+
+.customize-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 60px 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.customize-content {
+  flex: 1;
+  max-width: 40%;
+}
+
+.customize-content h1 {
+  font-size: 32px;
+  margin-bottom: 20px;
+ color:white
+}
+
+.customize-content p {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.customize-image {
+  flex: 1;
+  text-align: right;
+  max-width: 60%;
+}
+
+.customize-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .customize-section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .customize-content,
+  .customize-image {
+    max-width: 100%;
+  }
+
+  .customize-image {
+    margin-top: 30px;
+  }
+}
+
 .extensions-section {
   max-width: 1200px;
   margin: 0 auto;
