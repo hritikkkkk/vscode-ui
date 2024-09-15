@@ -185,6 +185,60 @@ body {
   color: #9ba3b4;
   line-height: 1.4;
 }
+.trusted-brands {
+  padding: 0 1rem;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.trusted-brands__title {
+  font-weight: 600;
+  color: white;
+  text-transform: uppercase;
+}
+
+.trusted-brands__logos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.trusted-brands__logo {
+  margin: 0 1.25rem 1.25rem 1.25rem; /* Add margin to left and right for spacing */
+}
+
+.trusted-brands__logo:hover {
+  color: slateblue
+}
+
+.trusted-brands__svg {
+  height: 2.25rem;
+}
+
+@media (min-width: 640px) {
+  .trusted-brands__logos {
+    justify-content: space-between;
+  }
+}
+
+@media (min-width: 768px) {
+  .trusted-brands {
+    max-width: 768px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .trusted-brands {
+    max-width: 1024px;
+    padding: 0 9rem;
+  }
+
+  .trusted-brands__logo {
+    margin-bottom: 1.25rem; /* Ensure space below logos */
+  }
+}
 
 .build-section {
   display: flex;
